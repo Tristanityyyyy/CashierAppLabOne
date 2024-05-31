@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CashierAppLabOne
+namespace ItemNamespace
 {
     public class DiscountedItem : Item
     {

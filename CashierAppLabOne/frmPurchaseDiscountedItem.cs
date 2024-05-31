@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ItemNamespace;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CashierAppLabOne
 {
-    public partial class Form1 : Form
+    public partial class frmPurchaseDiscountedItem : Form
     {
-        public Form1()
+        public frmPurchaseDiscountedItem()
         {
             InitializeComponent();
         }
@@ -21,6 +22,7 @@ namespace CashierAppLabOne
         {
 
         }
+
         DiscountedItem discItem;
         private void button1_Click(object sender, EventArgs e)
         {
@@ -41,6 +43,22 @@ namespace CashierAppLabOne
             double change = discItem.getChange();
             changeAmount.Text = change.ToString();
 
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoginAccount frmLoginAccount = new frmLoginAccount();
+            frmLoginAccount.Show();
         }
     }
 }
